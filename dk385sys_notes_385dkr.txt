@@ -24,3 +24,47 @@ albe@pmdsdata4:/srv/dkr/385dkrsys$
 
 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-07-31[Jul-Tue]15-56PM
+
+create git repo...
+
+git init
+#
+ git config --global user.email "dgleba@gmail.com"
+  git config --global user.name "David Gleba"
+  git config --global github.user dgleba
+#
+gitali.sh
+
+git remote show origin
+git remote -v 
+#git remote remove origin
+git remote -v 
+
+export nameu=dgleba@gmail.com
+cpwd=$PWD
+reponame=${PWD##*/}
+echo
+echo $reponame
+echo
+
+#
+curl -u $nameu https://api.github.com/user/repos -d "{\"name\":\"$reponame\"}"
+
+# paste this after..
+
+git remote add origin https://github.com/dgleba/$reponame.git
+
+git remote show origin
+git remote -v 
+#git remote remove origin
+git remote -v 
+
+git cap 'initial 2018-07-31_Tue_15.59-PM'
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
