@@ -1,0 +1,26 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-07-31[Jul-Tue]15-46PM
+
+cd 385dkr
+
+docker-compose  -f ./mysql/docker-compose.yml up --build
+
+docker-compose  -f   ./php/docker-compose.yml up --build
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2018-07-31_Tue_15.53-PM
+
+albe@pmdsdata4:~$ z 385
+albe@pmdsdata4:/srv/dkr/385dkrsys$ docker-compose  -f   ./php/docker-compose.yml up --build
+ERROR: Service 'web' depends on service 'db' which is undefined.
+albe@pmdsdata4:/srv/dkr/385dkrsys$
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+

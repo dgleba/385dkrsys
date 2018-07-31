@@ -1,0 +1,30 @@
+# ./docker-compose.yml ,  192.168.88.46:6021
+
+version: '3'
+
+services:
+
+    
+  db:
+    image: mysql:5.7.22
+    # build: .
+    # image: dkr378php8mysq
+    restart: always
+    container_name: dkr385mysql23
+    env_file:
+      - ../.env
+    # environment:
+      # MYSQL_ROOT_PASSWORD: root
+      # MYSQL_DATABASE: test
+    ports:
+      - "6023:3306"
+    volumes:
+      # - /var/aa/mysql/:/var/lib/mysql/
+      # - /var/www/mysql385/:/var/lib/mysql/
+      - ../data/mysql385/:/var/lib/mysql/
+    networks:
+      - one
+
+networks:
+  one:
+    
