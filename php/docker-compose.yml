@@ -1,15 +1,18 @@
 # ./docker-compose.yml ,  192.168.88.46:6021
 
-version: '3'
+version: '3.6'
 
 services:
 
   web:
     #image: php:7.2.2-apache
     build: .
-    image: dkr378php8
+    image: dkr385php22
     restart: always
-    container_name: dkr378php8
+    container_name: dkr385php22
+    external_links:
+     - dkr385mysql23:db
+     #- project_db_1:postgresql    
     depends_on:
       - db
       - dbphp
@@ -49,4 +52,8 @@ services:
       - one
 
 
-    
+networks:
+    one:
+      name: one
+        external:true
+          

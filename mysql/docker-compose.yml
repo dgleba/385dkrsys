@@ -1,6 +1,6 @@
 # ./docker-compose.yml ,  192.168.88.46:6021
 
-version: '3'
+version: '3.6'
 
 services:
 
@@ -25,6 +25,9 @@ services:
     networks:
       - one
 
+
 networks:
-  one:
-    
+    one:
+      name: one
+        external:true
+      

@@ -68,3 +68,27 @@ git cap 'initial 2018-07-31_Tue_15.59-PM'
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-08-01[Aug-Wed]12-56PM
+https://stackoverflow.com/questions/38088279/communication-between-multiple-docker-compose-projects
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-08-01[Aug-Wed]14-29PM
+
+
+mysql compose starts ok.
+
+albe@pmdsdata4:/srv/dkr/385dkrsys$ docker-compose  -f   ./php/docker-compose.yml up --build --force-recreate
+ERROR: Service 'web' depends on service 'db' which is undefined.
+albe@pmdsdata4:/srv/dkr/385dkrsys$
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
