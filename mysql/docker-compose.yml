@@ -4,7 +4,6 @@ version: '3.6'
 
 services:
 
-    
   db:
     image: mysql:5.7.22
     # build: .
@@ -25,9 +24,7 @@ services:
     networks:
       - one
 
-
 networks:
-    one:
-      name: one
-        external:true
-      
+  one:
+    name: one
+      external:true

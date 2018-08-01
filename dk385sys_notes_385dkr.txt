@@ -92,3 +92,36 @@ albe@pmdsdata4:/srv/dkr/385dkrsys$
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-08-01[Aug-Wed]15-16PM
+
+   09f22d3..a94c942  master -> master
+albe@pmdsdata4:/srv/dkr/385dkrsys$ docker network ls
+NETWORK ID          NAME                    DRIVER              SCOPE
+33da76878416        bookmeapi382n_default   bridge              local
+06184144382e        brail347a22_default     bridge              local
+f13540b4ee74        bridge                  bridge              local
+951a11589c2f        dkr378php1_default      bridge              local
+e58a3d33f2d9        dkr378php2_default      bridge              local
+4037bd88c2ff        dkr378php4_default      bridge              local
+42c2103abc4b        dkr378php_one           bridge              local
+06cca1169267        docker_default          bridge              local
+8ebe20a09474        host                    host                local
+82adfb0be568        html_default            bridge              local
+6b2e214a2238        k282kdr_default         bridge              local
+3f0c064ba63c        metabase25_default      bridge              local
+c64a6077d28c        metabase_default        bridge              local
+3b6b714fa49f        mysql_one               bridge              local
+c563957bf7e7        none                    null                local
+f7e4d716fd48        one external:true       bridge              local
+c039d2d4ce30        p382dkr_default         bridge              local
+f27d07b73238        p382dkr_one             bridge              local
+albe@pmdsdata4:/srv/dkr/385dkrsys$ docker-compose  -f   ./php/docker-compose.yml up --build --force-recreate
+ERROR: Service 'web' depends on service 'db' which is undefined.
+albe@pmdsdata4:/srv/dkr/385dkrsys$
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
