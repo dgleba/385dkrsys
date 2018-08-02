@@ -9,12 +9,12 @@ services:
     build: .
     image: dkr385php22
     restart: always
-    container_name: dkr385php22
-    external_links:
-     - dkr385mysql23:db
+    container_name: phpa
+    # external_links:
+     # - mysqlm:db
      #- project_db_1:postgresql    
     depends_on:
-      - db
+      #- db
       - dbphp
     env_file:
       - ../.env
@@ -38,7 +38,7 @@ services:
     # build: ./mysql
     # image: dkr385php22mysq
     restart: always
-    container_name: dkr385php22mysq
+    container_name: mysqlphp
     env_file:
       - ../.env
     # environment:

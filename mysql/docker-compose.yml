@@ -9,7 +9,7 @@ services:
     # build: .
     # image: dkr378php8mysq
     restart: always
-    container_name: dkr385mysql23
+    container_name: mysqlm
     env_file:
       - ../.env
     # environment:
