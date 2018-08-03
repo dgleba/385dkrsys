@@ -1,14 +1,58 @@
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Title:  .
+-----------------------2018-08-03[Aug-Fri]10-28AM
+
+https://github.com/dgleba/vamp206a/blob/master/a3/81docker.sh
+
+https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-convenience-script
+
+
+curl -fsSL get.docker.com -o get-docker.sh
+$ 
+sudo sh get-docker.sh
+
+<output truncated>
+
+If you would like to use Docker as a non-root user, you should now consider
+adding your user to the "docker" group with something like:
+$
+  sudo usermod -aG docker your-user
+  
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
 -----------------------2018-07-31[Jul-Tue]15-46PM
 
-cd 385dkr
-
+fld=/srv/dkr/385dkrsys
+cd $fld
 docker-compose  -f ./mysql/docker-compose.yml up --build
 
+cd $fld
 docker-compose  -f   ./php/docker-compose.yml up --build
+
+#
+
+sudo chown -R albe .
+sudo chown -R mysql data
+
+echo -e '<?php\nphpinfo();'>src/html/index.php 
  
+ 
+http://pmdsdata4:6021/
+
+#adminer
+http://pmdsdata4:6021/a.php
+server - db  
+or
+server - dbphp  # for the mysql in the php compose  - consider it a development db.
+username - root
+pw - root
+
+
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -121,6 +165,16 @@ f27d07b73238        p382dkr_one             bridge              local
 albe@pmdsdata4:/srv/dkr/385dkrsys$ docker-compose  -f   ./php/docker-compose.yml up --build --force-recreate
 ERROR: Service 'web' depends on service 'db' which is undefined.
 albe@pmdsdata4:/srv/dkr/385dkrsys$
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-08-03[Aug-Fri]10-38AM
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

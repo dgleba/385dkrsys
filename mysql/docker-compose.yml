@@ -20,7 +20,7 @@ services:
     volumes:
       # - /var/aa/mysql/:/var/lib/mysql/
       # - /var/www/mysql385/:/var/lib/mysql/
-      - ../data/mysql385/:/var/lib/mysql/
+      - ../../data/mysql385/:/var/lib/mysql/
     networks:
       - one
 
