@@ -30,6 +30,8 @@ fld=/srv/dkr/385dkrsys
 cd $fld
 docker-compose  -f ./mysql/docker-compose.yml up --build
 
+
+fld=/srv/dkr/385dkrsys
 cd $fld
 docker-compose  -f   ./php/docker-compose.yml up --build
 
